@@ -1,0 +1,324 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+header {
+  height: 50px;
+  padding: 0 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-bottom: 1px solid lightgray;
+}
+
+header h1 {
+  font-size: 40px;
+  font-family: "Rubik", sans-serif;
+  font-weight: 500;
+  letter-spacing: -2px;
+}
+
+header .material-icons {
+  font-size: 35px;
+  border-radius: 5px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+header .material-icons:hover {
+  color: white;
+  background-color: black;
+}
+
+#file {
+  display: none;
+}
+
+.game {
+  width: 800px;
+  padding-top: 5%;
+  margin: auto;
+}
+
+.game .board {
+  width: 80%;
+  height: 474px;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.game .board .word {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.game .board .word .letter {
+  height: 80px;
+  width: 80px;
+  border: solid 2px lightgray;
+  font-size: 30px;
+  font-family: "Rubik", sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 3px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.game .board .word .letter .letter-value {
+  font-size: 50px;
+  font-family: "Rubik", sans-serif;
+}
+
+.letter-nonexistent {
+  color: #CC0000;
+  border-color: #CC0000 !important;
+}
+
+.letter-half-correct {
+  color: white;
+  background-color: #b4b43c;
+  border-color: #b4b43c !important;
+}
+
+.letter-correct {
+  color: white;
+  background-color: #50a050;
+  border-color: #50a050 !important;
+}
+
+.letter-incorrect {
+  color: white;
+  background-color: #6e6e6e;
+  border-color: #6e6e6e !important;
+}
+
+.keyboard {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 20%;
+}
+
+.keyboard .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin: 3px 0;
+}
+
+.keyboard .key-wide {
+  width: 65px;
+}
+
+.key {
+  background-color: #DCDCDC;
+  border-radius: 3px;
+  width: 40px;
+  height: 50px;
+  margin: 0 3px;
+  border: none;
+  font-size: 16px;
+  font-family: "Rubik", sans-serif;
+  font-weight: 500;
+  cursor: pointer;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.key-green {
+  background-color: #50a050;
+  color: white;
+}
+
+.key-yellow {
+  background-color: #b4b43c;
+  color: white;
+}
+
+.key-gray {
+  background-color: #6e6e6e;
+  color: white;
+}
+
+.modal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.modal .modal-container {
+  border: solid 3px black;
+  border-radius: 5px;
+  width: 600px;
+  height: 400px;
+  background-color: white;
+  padding: 20px;
+  margin-bottom: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.modal .modal-container .modal-title {
+  font-family: "Rubik", sans-serif;
+  font-size: 30px;
+  margin-bottom: 50px;
+  border-bottom: 2px solid black;
+}
+
+.modal .settings-option {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin: 5px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.modal .settings-option p {
+  font-family: "Rubik", sans-serif;
+  font-size: 20px;
+  margin-right: 20px;
+}
+
+.modal .main-button {
+  padding: 5px 10px;
+  margin-top: 50px;
+  font-family: "Rubik", sans-serif;
+  font-size: 30px;
+  border: solid 2px black;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #DCDCDC;
+  color: black;
+  font-weight: 500;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.modal .main-button:hover {
+  background-color: #50a050;
+  color: white;
+}
+
+.endgame-container {
+  height: 300px !important;
+}
+
+.modal-show {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.modal-hide {
+  display: none;
+}
+
+.option-selected {
+  background-color: #50a050;
+  color: white;
+}
+
+.icon-win {
+  font-size: 90px;
+  color: #50a050;
+}
+
+.icon-lose {
+  font-size: 90px;
+  color: #CC0000;
+}
+
+.icon-show {
+  display: initial;
+}
+
+.icon-hide {
+  display: none;
+}
+/*# sourceMappingURL=style.css.map */

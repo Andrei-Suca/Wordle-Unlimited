@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Wordle</title>
+</head>
+<body>
+    <div class="modal settings-modal modal-show">
+        <div class="modal-container settings-container">
+            <p class="modal-title">Customize your wordle</p>
+            <div class="settings-option">
+                <p>Letters in word:</p>
+                <div>
+                    <button class="key letter-number">4</button>
+                    <button class="key letter-number">5</button>
+                    <button class="key letter-number">6</button>
+                    <button class="key letter-number">7</button>
+                    <button class="key letter-number">8</button>
+                </div>
+            </div>
+            <div class="settings-option">
+                <p>Chances to guess:</p>
+                <div>
+                    <button class="key chance-number">3</button>
+                    <button class="key chance-number">4</button>
+                    <button class="key chance-number">5</button>
+                    <button class="key chance-number">6</button>
+                    <button class="key chance-number">7</button>
+                </div>
+            </div>
+            <button class="main-button" id="start-button">START</button>
+        </div>
+    </div>
+    <div class="modal endgame-modal modal-hide">
+        <div class="modal-container endgame-container">
+            <p class="modal-title" id="game-result">You crazy son of a bitch, you did it!</p>
+            <i class="material-icons icon-win">check_box</i>
+            <i class="material-icons icon-lose">cancel</i>
+            <button class="main-button" id="play-again">Play again?</button>
+        </div>
+    </div>
+    <header>
+        <i class="material-icons">insert_chart</i>
+        <h1>Wordle</h1>
+        <i class="material-icons" id="settings">settings_applications</i>
+    </header>
+    <main>
+        <div class="game">
+            <input type="file" id="file" src="banana.txt">
+            <div class="board"></div>
+            <div class="keyboard">
+                <div class="row row-1">
+                    <button class="key char-key" id="key-q" tabindex="-1">Q</button>
+                    <button class="key char-key" id="key-w" tabindex="-1">W</button>
+                    <button class="key char-key" id="key-e" tabindex="-1">E</button>
+                    <button class="key char-key" id="key-r" tabindex="-1">R</button>
+                    <button class="key char-key" id="key-t" tabindex="-1">T</button>
+                    <button class="key char-key" id="key-y" tabindex="-1">Y</button>
+                    <button class="key char-key" id="key-u" tabindex="-1">U</button>
+                    <button class="key char-key" id="key-i" tabindex="-1">I</button>
+                    <button class="key char-key" id="key-o" tabindex="-1">O</button>
+                    <button class="key char-key" id="key-p" tabindex="-1">P</button>
+                </div>
+                <div class="row row-2">
+                    <button class="key char-key" id="key-a" tabindex="-1">A</button>
+                    <button class="key char-key" id="key-s" tabindex="-1">S</button>
+                    <button class="key char-key" id="key-d" tabindex="-1">D</button>
+                    <button class="key char-key" id="key-f" tabindex="-1">F</button>
+                    <button class="key char-key" id="key-g" tabindex="-1">G</button>
+                    <button class="key char-key" id="key-h" tabindex="-1">H</button>
+                    <button class="key char-key" id="key-j" tabindex="-1">J</button>
+                    <button class="key char-key" id="key-k" tabindex="-1">K</button>
+                    <button class="key char-key" id="key-l" tabindex="-1">L</button>
+                </div>
+                <div class="row row-3">
+                    <button class="key key-wide" id="enter" tabindex="-1">ENTER</button>
+                    <button class="key char-key" id="key-z" tabindex="-1">Z</button>
+                    <button class="key char-key" id="key-x" tabindex="-1">X</button>
+                    <button class="key char-key" id="key-c" tabindex="-1">C</button>
+                    <button class="key char-key" id="key-v" tabindex="-1">V</button>
+                    <button class="key char-key" id="key-b" tabindex="-1">B</button>
+                    <button class="key char-key" id="key-n" tabindex="-1">N</button>
+                    <button class="key char-key" id="key-m" tabindex="-1">M</button>
+                    <button class="key key-wide" id="backspace" tabindex="-1"><i class="material-icons">backspace</i></button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
