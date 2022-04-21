@@ -209,7 +209,7 @@ function GuessWord() {
                 tempKey.classList.add("key-green");
                 currentLetters[i].classList.add("letter-correct");
                 tempMagicWord = tempMagicWord.replace(tempMagicWord[i].toString(), "*");
-                tempGuessedWord = tempGuessedWord.replace(tempGuessedWord[i].toString(), "%");
+                tempGuessedWord = tempGuessedWord.replace(tempGuessedWord[i].toString(), "&");
                 correctLetters++;
             }
         }
