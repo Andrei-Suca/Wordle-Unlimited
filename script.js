@@ -55,6 +55,19 @@ for (let i = 0; i < charKeys.length; i++) {
     })
 }
 
+//keyboard input from the user
+document.addEventListener('keydown', event =>{
+    let pressedKey = event.key.toUpperCase();
+    if (pressedKey.length == 1 && pressedKey.match(/[a-z]/i)){
+        TypeWord(pressedKey);
+    } else if (pressedKey == "ENTER"){
+        GuessWord();
+    } else if (pressedKey == "BACKSPACE"){
+        Backspace();
+    }
+
+})
+
 //backspace button
 let backspace = document.querySelector("#backspace");
 backspace.addEventListener("click", event => {
