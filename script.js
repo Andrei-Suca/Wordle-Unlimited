@@ -65,7 +65,6 @@ document.addEventListener('keydown', event =>{
     } else if (pressedKey == "BACKSPACE"){
         Backspace();
     }
-
 })
 
 //backspace button

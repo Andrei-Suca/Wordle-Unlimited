@@ -5,8 +5,15 @@
           box-sizing: border-box;
 }
 
+body {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+}
+
 header {
   height: 50px;
+  width: 100%;
   padding: 0 20px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -44,19 +51,20 @@ header .material-icons:hover {
   background-color: black;
 }
 
-#file {
-  display: none;
+main {
+  height: 100%;
 }
 
 .game {
-  width: 800px;
-  padding-top: 5%;
+  width: auto;
+  height: calc(100% - 300px);
+  padding-top: 50px;
   margin: auto;
 }
 
 .game .board {
   width: 80%;
-  height: 474px;
+  height: 100%;
   margin: auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -65,9 +73,16 @@ header .material-icons:hover {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .game .board .word {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -84,7 +99,7 @@ header .material-icons:hover {
 }
 
 .game .board .word .letter {
-  height: 80px;
+  height: calc((100vh - 350px) / 7);
   width: 80px;
   border: solid 2px lightgray;
   font-size: 30px;
@@ -145,7 +160,11 @@ header .material-icons:hover {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-top: 20%;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  bottom: 20px;
 }
 
 .keyboard .row {
@@ -166,7 +185,7 @@ header .material-icons:hover {
 .key {
   background-color: #DCDCDC;
   border-radius: 3px;
-  width: 40px;
+  width: 36px;
   height: 50px;
   margin: 0 3px;
   border: none;
@@ -208,6 +227,8 @@ header .material-icons:hover {
       -ms-flex-pack: center;
           justify-content: center;
   position: absolute;
+  left: 0;
+  top: 0;
   height: 100%;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.5);

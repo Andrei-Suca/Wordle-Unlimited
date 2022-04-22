@@ -11,8 +11,14 @@ $red: #CC0000;
     box-sizing: border-box;
 }
 
+body{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+}
 header{
     height: 50px;
+    width: 100%;
     padding: 0 20px;
     display: flex;
     flex-direction: row;
@@ -37,26 +43,30 @@ header{
     }
 }
 
-#file{
-    display: none;
+main{
+    height: 100%;
 }
 .game{
-    width: 800px;
-    padding-top: 5%;
+    width: auto;
+    height: calc(100% - 300px);
+    padding-top: 50px;
     margin: auto;
     .board{
         width: 80%;
-        height: 474px;
+        height: 100%;
         margin: auto;
         display: flex;
         flex-direction: column;
+        align-items: center;
+        justify-content: center;
         .word{
+            width: 100%;
             display: flex;
             flex-direction: row;
             align-items: center;
             justify-content: center;
             .letter{
-                height: 80px;
+                height: calc((100vh - 350px) / 7);
                 width: 80px;
                 border: solid 2px lightgray;
                 font-size: 30px;
@@ -103,7 +113,10 @@ header{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 20%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 20px;
     .row{
         display: flex;
         flex-direction: row;
@@ -116,7 +129,7 @@ header{
 .key{
     background-color: $lightgray;
     border-radius: 3px;
-    width: 40px;
+    width: 36px;
     height: 50px;
     margin: 0 3px;
     border: none;
@@ -148,6 +161,8 @@ header{
     align-items: center;
     justify-content: center;
     position: absolute;
+    left: 0;
+    top: 0;
     height: 100%;
     width: 100%;
     background-color: rgba(black, 0.5);

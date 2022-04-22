@@ -4,56 +4,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.PNG" type="image/x-icon">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <title>Wordle</title>
+    <title>Wordle - Unlimited</title>
 </head>
 <body>
-    <div class="modal settings-modal modal-show">
-        <div class="modal-container settings-container">
-            <p class="modal-title">Customize your wordle</p>
-            <div class="settings-option">
-                <p>Letters in word:</p>
-                <div>
-                    <button class="key letter-number">4</button>
-                    <button class="key letter-number">5</button>
-                    <button class="key letter-number">6</button>
-                    <button class="key letter-number">7</button>
-                    <button class="key letter-number">8</button>
-                </div>
-            </div>
-            <div class="settings-option">
-                <p>Chances to guess:</p>
-                <div>
-                    <button class="key chance-number">3</button>
-                    <button class="key chance-number">4</button>
-                    <button class="key chance-number">5</button>
-                    <button class="key chance-number">6</button>
-                    <button class="key chance-number">7</button>
-                </div>
-            </div>
-            <button class="main-button" id="start-button">START</button>
-        </div>
-    </div>
-    <div class="modal endgame-modal modal-hide">
-        <div class="modal-container endgame-container">
-            <p class="modal-title" id="game-result">You crazy son of a bitch, you did it!</p>
-            <i class="material-icons icon-win">check_box</i>
-            <i class="material-icons icon-lose">cancel</i>
-            <button class="main-button" id="play-again">Play again?</button>
-        </div>
-    </div>
     <header>
         <i class="material-icons">insert_chart</i>
-        <h1>Wordle</h1>
+        <h1>Wordle - Unlimited</h1>
         <i class="material-icons" id="settings">settings_applications</i>
     </header>
     <main>
         <div class="game">
-            <input type="file" id="file" src="banana.txt">
             <div class="board"></div>
             <div class="keyboard">
                 <div class="row row-1">
@@ -92,7 +58,42 @@
                 </div>
             </div>
         </div>
+        
     </main>
+    <div class="modal settings-modal modal-show">
+        <div class="modal-container settings-container">
+            <p class="modal-title">Customize your wordle</p>
+            <div class="settings-option">
+                <p>Letters in word:</p>
+                <div>
+                    <button class="key letter-number">4</button>
+                    <button class="key letter-number">5</button>
+                    <button class="key letter-number">6</button>
+                    <button class="key letter-number">7</button>
+                    <button class="key letter-number">8</button>
+                </div>
+            </div>
+            <div class="settings-option">
+                <p>Chances to guess:</p>
+                <div>
+                    <button class="key chance-number">3</button>
+                    <button class="key chance-number">4</button>
+                    <button class="key chance-number">5</button>
+                    <button class="key chance-number">6</button>
+                    <button class="key chance-number">7</button>
+                </div>
+            </div>
+            <button class="main-button" id="start-button">START</button>
+        </div>
+    </div>
+    <div class="modal endgame-modal modal-hide">
+        <div class="modal-container endgame-container">
+            <p class="modal-title" id="game-result">You crazy son of a bitch, you did it!</p>
+            <i class="material-icons icon-win">check_box</i>
+            <i class="material-icons icon-lose">cancel</i>
+            <button class="main-button" id="play-again">Play again?</button>
+        </div>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
